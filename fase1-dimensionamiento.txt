@@ -1,26 +1,26 @@
 FASE 1 — Dimensionamiento
 
-1. Con 500 visitas/día y 5 peticiones por visita, ¿cuál es el promedio de peticiones/segundo? Aplica
+1- Con 500 visitas/día y 5 peticiones por visita, ¿cuál es el promedio de peticiones/segundo? Aplica
 un factor pico de 15 y calcula el pico real.
 
 R// Multipliqué 500 visitas por 5 peticiones 2,500 al día y lo dividí entre 86,400 segundos, lo que
 me dio un promedio de 0.029 peticiones por segundo. Al aplicarle el factor de 15, el pico real me quedó en 0.43 peticiones por segundo.
 
-2. ¿Los 2 vCPU y 4 GB de RAM alcanzan para el tráfico diario? ¿Y para el pico de 3,000 visitas?
+2- ¿Los 2 vCPU y 4 GB de RAM alcanzan para el tráfico diario? ¿Y para el pico de 3,000 visitas?
 Justifica.
 
 R// Sí alcanzan porque la API en Node.js es bastante ligera y no consume casi nada de memoria.
  Como el tráfico apenas llega a menos de 1 petición por segundo en el pico, 
 el servidor no sufrirá ningún sobrecargo, asi que si alcanzan.
 
-3. Si el sitio empieza a responder lento, ¿qué recurso revisarías primero: CPU, RAM, disco o red?
+3- Si el sitio empieza a responder lento, ¿qué recurso revisarías primero: CPU, RAM, disco o red?
 Explica por qué.
 
 R// De mi parte revisaria el cpu porque al manejar las peticiones en Node.js 
 cuando hay mucho tráfico el procesador se satura rapidísimo antes de que se llene la memoria RAM o el disco.
 
 
-4. Decisión personal: para un negocio como “Dulce Hogar”, ¿recomiendas nube o servidor local?
+4.-Decisión personal: para un negocio como “Dulce Hogar”, ¿recomiendas nube o servidor local?
 Menciona 3 criterios (costo, escalabilidad, mantenimiento).
 
 R// Yo recomiendo la nube ya que para dulce hogar el costo es menor al no tener que comprar equipo físico, 
@@ -28,7 +28,7 @@ la escalabilidad es ideal para subir recursos solo en días festivos con picos a
  y el mantenimiento es mucho más fácil sin depender de soporte técnico en el local de mi punto de vista.
 
 
-5. Reto: si el sitio fuera solo HTML/CSS estático (sin Express), ¿bajaría la necesidad de CPU?
+5- Reto: si el sitio fuera solo HTML/CSS estático (sin Express), ¿bajaría la necesidad de CPU?
 Explica por qué.
 
 R// Sí bajaría bastante porque Apache solo tendría que leer y entregar los archivos directamente del disco sin procesar lógica en el backend. 
