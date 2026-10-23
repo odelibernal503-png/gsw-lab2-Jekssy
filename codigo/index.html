@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repostería Dulce Hogar - Jekssy</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            background: radial-gradient(circle at top right, #fff0f3, #ffe3e3, #fff0f3);
+            color: #2d3436;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 192, 203, 0.5);
+            padding: 15px 30px;
+            border-radius: 50px;
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(255, 107, 129, 0.1);
+            margin-bottom: 40px;
+        }
+        .brand {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ff4757;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .server-badges {
+            display: flex;
+            gap: 10px;
+        }
+        .badge {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 20px;
+            color: white;
+            text-transform: uppercase;
+        }
+        .badge-apache { background: linear-gradient(135deg, #ff4757, #ff6b81); }
+        .badge-express { background: linear-gradient(135deg, #2f3542, #57606f); }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 42px;
+            color: #4a154b;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .hero p {
+            font-size: 18px;
+            color: #747d8c;
+            font-style: italic;
+        }
+
+        .catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 900px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid #ffe3e3;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 107, 129, 0.15);
+            border-color: #ffccd5;
+        }
+        .product-image-placeholder {
+            height: 180px;
+            background: linear-gradient(45deg, #ffccd5, #fff0f3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 65px;
+        }
+        .product-info {
+            padding: 25px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-title {
+            font-size: 20px;
+            color: #2f3542;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .product-desc {
+            font-size: 14px;
+            color: #747d8c;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .btn-order {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 107, 129, 0.3);
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-order:hover {
+            box-shadow: 0 8px 25px rgba(255, 107, 129, 0.5);
+            transform: scale(1.03);
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #a4b0be;
+            text-align: center;
+        }
+        .footer strong { color: #ff4757; }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="brand">✨ Dulce Hogar</div>
+        <div class="server-badges">
+            <span class="badge badge-apache">Apache :8085</span>
+            <span class="badge badge-express">Express :9090</span>
+        </div>
+    </div>
+
+    <div class="hero">
+        <h1>Nuestra Vitrina Digital</h1>
+        <p>Pasteles artesanales preparados con amor</p>
+    </div>
+
+    <div class="catalog">
+        <!-- Producto 1 -->
+        <div class="product-card">
+            <div class="product-image-placeholder">🎂</div>
+            <div class="product-info">
+                <div>
+                    <h3 class="product-title">Pastel de Tres Leches</h3>
+                    <p class="product-desc">Tradicional, ultra esponjoso, bañado en nuestra mezcla secreta de tres leches y decorado con fresas frescas.</p>
+                </div>
+                <a href="/api/pedido?producto=TresLeches&cantidad=1" class="btn-order">Reservar Pedido</a>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product-card">
+            <div class="product-image-placeholder">🧁</div>
+            <div class="product-info">
+                <div>
+                    <h3 class="product-title">Cupcakes de Vainilla</h3>
+                    <p class="product-desc">Suaves panecillos de vainilla gourmet con un remolino perfecto de crema de mantequilla rosa y chispas.</p>
+                </div>
+                <a href="/api/pedido?producto=Cupcakes&cantidad=6" class="btn-order">Reservar Caja (6)</a>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product-card">
+            <div class="product-image-placeholder">🍰</div>
+            <div class="product-info">
+                <div>
+                    <h3 class="product-title">Cheesecake de Frambuesa</h3>
+                    <p class="product-desc">Base crujiente de galleta María, crema de queso horneada a la perfección y una cobertura artesanal ácida de frambuesa.</p>
+                </div>
+                <a href="/api/pedido?producto=Cheesecake&cantidad=1" class="btn-order">Reservar Porción</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Infraestructura escalable y despliegue seguro desarrollado por: <strong>Jekssy</strong></p>
+    </div>
+
+</body>
+</html>

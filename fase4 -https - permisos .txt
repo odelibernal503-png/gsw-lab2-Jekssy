@@ -1,0 +1,7 @@
+Fase 4: Seguridad y Certificados HTTPS
+
+Para asegurar la página de la repostería, activé el candadito de seguridad (HTTPS) utilizando el puerto seguro 4443. 
+
+Como tuve algunos problemas de red para descargar la herramienta mkcert, decidí usar el comando openssl directamente en mi terminal de Ubuntu. Con esto logré generar mis propios archivos de llaves y certificados (.pem) de manera local sin depender de internet.
+
+Por motivos de seguridad, le apliqué el comando "chmod 600" a las llaves dentro de la carpeta /etc/apache2/ssl/. Hice esto para asegurar que nadie más en el sistema pueda leer o modificar mi certificado de seguridad. Al final, reinicié el servicio de Apache, verifiqué con configtest y todo me funcionó con "Syntax OK".

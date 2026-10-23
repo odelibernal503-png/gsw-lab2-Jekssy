@@ -1,0 +1,7 @@
+Fase 3: Enlace de Apache con Express (Proxy)
+
+En esta fase conecté el servidor web Apache con mi programa de Node.js. 
+
+Programé el backend de Node.js para que corriera internamente en el puerto 9090. Después, configuré mi archivo dulcehogar.local.conf dentro de Apache usando el puerto 8085. 
+
+Le agregué las líneas de ProxyPass para que cuando alguien busque la dirección usando el prefijo "/api", Apache reciba la petición y se la pase automáticamente a mi programa de Node.js en el puerto 9090. Así logré que la aplicación responda correctamente con los datos del saludo y el pedido en formato JSON.

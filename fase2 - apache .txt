@@ -1,0 +1,10 @@
+Fase 2: Configuración de Apache y mis respuestas
+
+Estas son mis respuestas a las preguntas de la guía:
+
+1. ¿Qué diferencia hay entre sites-available y sites-enabled?
+- Para mí, sites-available es como la bodega donde guardo todos los archivos de configuración que voy creando para las páginas web. Modificar cosas ahí dentro no cambia nada en el sitio que está activo en ese momento.
+- Por otro lado, sites-enabled es la carpeta de donde Apache lee las páginas que de verdad van a salir a internet. Ahí lo que hago es poner accesos directos (enlaces simbólicos) de los archivos que tengo en sites-available para poder activarlos.
+
+2. ¿Por qué se ejecuta configtest antes de reload?
+Yo ejecuto configtest porque me sirve para revisar que no haya escrito nada mal, o que no me falte algún punto o una letra en el archivo de configuración. Si hago un reload teniendo un error, la página web se me va a caer por completo. Con configtest me aseguro de que todo esté perfecto antes de reiniciar el servicio.
