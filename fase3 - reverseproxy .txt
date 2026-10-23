@@ -1,6 +1,6 @@
 Fase 3: Enlace de Apache con Express (Proxy)
 
-En esta fase conecté el servidor web Apache con mi programa de Node.js. 
+-En esta fase conecté el servidor web Apache con mi programa de Node.js. 
 
 Programé el backend de Node.js para que corriera internamente en el puerto 9090. Después, configuré mi archivo dulcehogar.local.conf dentro de Apache usando el puerto 8085. 
 
