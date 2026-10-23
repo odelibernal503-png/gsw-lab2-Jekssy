@@ -1,6 +1,6 @@
 Fase 4: Seguridad y Certificados HTTPS
 
-Para asegurar la página de la repostería, activé el candadito de seguridad (HTTPS) utilizando el puerto seguro 4443. 
+-Para asegurar la página de la repostería, activé el candadito de seguridad (HTTPS) utilizando el puerto seguro 4443. 
 
 Como tuve algunos problemas de red para descargar la herramienta mkcert, decidí usar el comando openssl directamente en mi terminal de Ubuntu. Con esto logré generar mis propios archivos de llaves y certificados (.pem) de manera local sin depender de internet.
 
