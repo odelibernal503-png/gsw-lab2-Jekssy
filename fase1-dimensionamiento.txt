@@ -19,7 +19,6 @@ Explica por qué.
 R// De mi parte revisaria el cpu porque al manejar las peticiones en Node.js 
 cuando hay mucho tráfico el procesador se satura rapidísimo antes de que se llene la memoria RAM o el disco.
 
-
 4.-Decisión personal: para un negocio como “Dulce Hogar”, ¿recomiendas nube o servidor local?
 Menciona 3 criterios (costo, escalabilidad, mantenimiento).
 
